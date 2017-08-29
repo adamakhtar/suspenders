@@ -235,13 +235,6 @@ config.public_file_server.headers = {
       copy_file 'database_cleaner_rspec.rb', 'spec/support/database_cleaner.rb'
     end
 
-    def provide_shoulda_matchers_config
-      copy_file(
-        "shoulda_matchers_config_rspec.rb",
-        "spec/support/shoulda_matchers.rb"
-      )
-    end
-
     def configure_spec_support_features
       empty_directory_with_keep_file 'spec/features'
       empty_directory_with_keep_file 'spec/support/features'
